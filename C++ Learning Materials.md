@@ -16,7 +16,7 @@ Material linked in roughly the order in which a beginner should consume them.  T
 * [cpp.sh](http://cpp.sh/) online C++ compiler, supports C++98/11/14
 * [TheChernoProject C++ series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&disable_polymer=true) — does a good job of explaining what's actually happening in the language — I'd suggest watching these in-order and not minding anything that seems too advanced and coming back later; I'll add other tutorials later for people who don't like videos and/or don't like his accent
 * [cppreference.com](cppreference.com) — indispensable reference manual for the C++ Standard Library (and language features to an extent)
-* [A Tour of C++](http://www.stroustrup.com/Tour.html) by Bjarne Stroustrup ([Amazon.com](https://www.amazon.com/Tour-C-Depth/dp/0321958314)) ~~honestly haven't gotten around to reading this so it might not be a beginner book~~
+* [A Tour of C++](http://www.stroustrup.com/Tour.html) by Bjarne Stroustrup ([Amazon.com](https://www.amazon.com/Tour-C-Depth/dp/0321958314)) if you're familiar with other languages, otherwise leave this for intermediate ~~honestly haven't gotten around to reading this~~
 * C things to know (for better or worse):
     * [www.AsciiTable.com](http://www.asciitable.com/)
     * [Characters, Symbols and the Unicode Miracle - Computerphile](https://www.youtube.com/watch?v=MijmeoH9LT4) — C/C++ *can* work with non-ASCII but you need to know how encodings work because C/C++ treat them as byte arrays
