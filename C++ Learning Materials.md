@@ -13,6 +13,7 @@ Material linked in roughly the order in which a beginner should consume them.  T
 ## Beginner
 
 * [Why C++ Sails When the Vasa Sank](https://www.youtube.com/watch?v=ltCgzYcpFUI) by Scott Meyers — a good answer to "why C++?" — also has "language for library developers" quote
+* [cpp.sh](http://cpp.sh/) online C++ compiler, supports C++98/11/14
 * [TheChernoProject C++ series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&disable_polymer=true) — does a good job of explaining what's actually happening in the language — I'd suggest watching these in-order and not minding anything that seems too advanced and coming back later; I'll add other tutorials later for people who don't like videos and/or don't like his accent
 * [cppreference.com](cppreference.com) — indispensable reference manual for the C++ Standard Library (and language features to an extent)
 * [A Tour of C++](http://www.stroustrup.com/Tour.html) by Bjarne Stroustrup ([Amazon.com](https://www.amazon.com/Tour-C-Depth/dp/0321958314)) ~~honestly haven't gotten around to reading this so it might not be a beginner book~~
@@ -33,6 +34,7 @@ Material linked in roughly the order in which a beginner should consume them.  T
 
 ## Advanced
 
+* [godbolt.org](https://godbolt.org/) compiler explorer
 * [CppCon 2016: Tim Haines “Improving Performance Through Compiler Switches — Examples from Scientific Computing"](https://www.youtube.com/watch?v=w5Z4JlMJ1VQ)
 * [Zero-overhead deterministic exceptions: Throwing values](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0709r0.pdf) — C++ language proposal by Herb Sutter, 5/2/18; gives a good overview of the (current) problems with C++ exceptions
 * [CppCon 2015: Andrei Alexandrescu “std::allocator...”](https://www.youtube.com/watch?v=LIb3L4vKZ7U)
