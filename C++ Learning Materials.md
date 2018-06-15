@@ -28,8 +28,10 @@ Material linked in roughly the order in which a beginner should consume them.  T
 * [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
 * [CppCon 2014: Bjarne Stroustrup "Make Simple Tasks Simple!"](CppCon 2014: Bjarne Stroustrup "Make Simple Tasks Simple!")
 * [Scott Meyers – The Most Important Design Guideline](https://www.youtube.com/watch?v=5tg1ONG18H8) — Not C++ specifically but important for understanding common C++ design decisions
+* [More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms) on Wikibooks
 * [CppCon 2014: Scott Meyers "Type Deduction and Why You Care"](https://www.youtube.com/watch?v=wQxj20X-tIU)
 * [Things that Matter - Scott Meyers | DConf2017](https://www.youtube.com/watch?v=RT46MpK39rQ)
+* [Curiously Recurring C++ Bugs at Facebook](https://www.youtube.com/watch?v=3MB2iiCkGxg)
 
 
 ## Advanced
