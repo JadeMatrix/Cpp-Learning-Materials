@@ -32,6 +32,9 @@ Material linked in roughly the order in which a beginner should consume them.  T
 * [CppCon 2014: Scott Meyers "Type Deduction and Why You Care"](https://www.youtube.com/watch?v=wQxj20X-tIU)
 * [Things that Matter - Scott Meyers | DConf2017](https://www.youtube.com/watch?v=RT46MpK39rQ)
 * [Curiously Recurring C++ Bugs at Facebook](https://www.youtube.com/watch?v=3MB2iiCkGxg)
+* [Scott Meyers — How Non-Member Functions Improve Encapsulation](http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197)
+* [CppCon 2017: Klaus Iglberger "Free Your Functions!"](https://www.youtube.com/watch?v=WLDT1lDOsb4)
+* CppCon 2016: Arthur O'Dwyer "Template Normal Programming" — [Part 1](https://www.youtube.com/watch?v=vwrXHznaYLA) and [Part 2](https://www.youtube.com/watch?v=VIz6xBvwYd8)
 
 
 ## Advanced
@@ -40,13 +43,17 @@ Material linked in roughly the order in which a beginner should consume them.  T
 * [CppCon 2016: Tim Haines “Improving Performance Through Compiler Switches — Examples from Scientific Computing"](https://www.youtube.com/watch?v=w5Z4JlMJ1VQ)
 * [Zero-overhead deterministic exceptions: Throwing values](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0709r0.pdf) — C++ language proposal by Herb Sutter, 5/2/18; gives a good overview of the (current) problems with C++ exceptions
 * [CppCon 2015: Andrei Alexandrescu “std::allocator...”](https://www.youtube.com/watch?v=LIb3L4vKZ7U)
+* CppCon 2014: Walter E. Brown "Modern Template Metaprogramming: A Compendium" — [Part 1](https://www.youtube.com/watch?v=Am2is2QCvxY) and [Part 2](https://www.youtube.com/watch?v=a0FliKwcwXE)
 
 
 ## People
 
 * Bjarne Stroustrup
 * Andrei Alexandrescu
+    * [Optimization Tips - Mo' Hustle Mo' Problems](https://www.youtube.com/watch?v=Qq_WaiwzOtI)
 * Scott Meyers
+    * "Make interfaces easy to use correctly and hard to use incorrectly"
+    * [How Non-Member Functions Improve Encapsulation](http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197)
 * Howard Hinnant
 * Herb Sutter
 * Alexander Stepanov? — look up talks, papers
