@@ -134,8 +134,29 @@ One difference ([until C++17](https://en.cppreference.com/w/cpp/language/class_t
 
 ```cpp
 sum( 0, { 1, 2, 3 } );
+```
+
+One problem though: the string version doesn't compile:
+
+```cpp
 sum( "Hello", { ", ", "World", "!" } );
 ```
+
+This is because the `start` argument is a C string — an array of `char`, which decays to `const char*` following C's array rules.  This means `T` is deduced to `const char*`, then we try to add more `const char*`s to that, which won't work.  If you want to pass string literals to `sum()`, you have to do one of these:
+
+```cpp
+sum( std::string{ "Hello" }, { ", ", "World", "!" } );
+// We don't need to convert the list of strings to add, as `start` (a
+// `std::string`) knows what to do when you try to add a `const char*`
+// to it
+```
+```cpp
+// C++14 introduces string literals in the standard library:
+using namespace std::literals::string_literals;
+sum( "Hello"s, { ", "s, "World"s, "!"s } );
+```
+
+Now `T` is deduced properly as `std::string`.
 
 Template functions can be class and struct members, too:
 
