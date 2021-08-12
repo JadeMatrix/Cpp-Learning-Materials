@@ -313,3 +313,7 @@ Traits types are commonly used in the C++ standard library to add a kind of "fun
 
 *TODO*
 
+
+### Optimizations
+
+*TODO*
