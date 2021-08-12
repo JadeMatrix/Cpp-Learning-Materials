@@ -99,7 +99,7 @@ template<
 };
 ```
 
-> **Note:** `std::size_t` is a useful utility type, defined to be some unsigned type able to store pretty much as high an element count as you'd ever need (typically it's defined as as large as pointers can get on your system).  You should always use `std::size_t` for sizes of containers or numbers of items unless you have a good reason not to.
+> **Note:** `std::size_t` is a useful utility type, defined to be some unsigned type able to store pretty much as high an element count as you'd ever need.  Typically this means "as large as pointers can get on your system."  You should always use `std::size_t` for sizes of containers, or any counts of items, unless you have a good reason not to.
 
 One important thing to notice about `std::array<>` is that its size is now set at compile-time; you can't change it while the program is running.  If you need to do that, use `std::vector<>`; while there are some important performance differences, that's a topic for another time.
 
@@ -107,7 +107,7 @@ One important thing to notice about `std::array<>` is that its size is now set a
 
 #### Functions
 
-All the examples so far have been template classes and structs.  Free functions can also be templated:
+All the examples so far have been template classes and structs.  Functions can also be templated:
 
 ```cpp
 template< typename T > T sum(
@@ -130,7 +130,7 @@ sum< std::string >( "Hello", { ", ", "World", "!" } );
 
 The result of the first one is the integer `6`, while the result of the second is the string `Hello, World!`.  (This example uses another C++11 feature, initializer lists, for brevity; without it you'd have to create the vectors first and push elements into them.)
 
-One difference between class/struct templates and function templates ([until C++17](https://en.cppreference.com/w/cpp/language/class_template_argument_deduction)) is that function template parameters can be deduced from the function's arguments, making template functions act like overloaded functions.  This doesn't require `<>` unlike default template parameters, making the two examples above even shorter:
+One difference ([until C++17](https://en.cppreference.com/w/cpp/language/class_template_argument_deduction)) between class/struct templates and function templates is that function template parameters can be deduced from the function's arguments, making template functions act like overloaded functions.  This doesn't require `<>` unlike default template parameters, making the example above even shorter:
 
 ```cpp
 sum( 0, { 1, 2, 3 } );
