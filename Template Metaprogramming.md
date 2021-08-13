@@ -6,6 +6,7 @@
 * separate language
 * not really intended as such, some warts
 * very dense, take breaks to practice
+* you should be familiar with the difference between a **declaration** (of a class, function, etc.) and a **definition** (of a class, function, etc.)
 
 
 ## Basic Usage
@@ -309,6 +310,7 @@ Traits types are commonly used in the C++ standard library to add a kind of "fun
     * `template<> using`
     * basically [currying](https://en.wikipedia.org/wiki/Currying)
     * note about aliases not working with `std::is_same<>` in most compilers (something about not fully resolving templates before checking same, or creating new template)
+* template class compatibility
 
 
 ## Intermediate Techniques
