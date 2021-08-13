@@ -253,6 +253,14 @@ namespace std
 }
 ```
 
+You can also *partially* alias templates.  If you want to have a type called `dictionary`, that behaves exactly like `std::map` except the keys are always `std::string`, you can write:
+
+```cpp
+template< typename Value > using dictionary = std::map< std::string, Value >;
+```
+
+That way when you write `dictionary< int >`, it's actually an alias for `std::map< std::string, int >`.
+
 
 ## Where Templates can Exist
 
