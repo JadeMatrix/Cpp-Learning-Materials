@@ -74,17 +74,17 @@ public:
 
 For a variable of type `pair< int, char >` called `p`, `p.first` will be an `int` and `p.second` will be a `char`.
 
-Template parameters can also have defaults; for example, if you wanted `pair` to default to two `void*` for some reason, you can write:
+Template parameters can also have defaults; for example, if you wanted `pair` to default to two `int`s for some reason, you can write:
 
 ```cpp
 template<
-    typename T1 = void*,
-    typename T2 = void*
+    typename T1 = int,
+    typename T2 = int
 > class pair
 { // etc...
 ```
 
-This means you can write `pair<>` and mean `pair< void*, void* >` (note you still need the angle brackets even with an empty parameter list).  Default parameters act similar to function default arguments; writing `pair< int >` means `pair< int, void* >`.
+This means you can write `pair<>` and mean `pair< int, int >` (note you still need the angle brackets even with an empty parameter list).  Default parameters act similar to function default arguments; writing `pair< float >` means `pair< float, int >`.
 
 Template parameters can also be certain types of constants, such as `int`, which is how [`std::array<>`](https://cppreference.com/w/cpp/container/array) works:
 
