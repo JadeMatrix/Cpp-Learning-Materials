@@ -61,8 +61,8 @@ You can even have multiple template parameters, such as with [`std::pair<>`](htt
 template< typename T1, typename T2 > class pair
 {
 public:
-    typedef T1 first_type;
-    typedef T2 second_type;
+    using  first_type = T1;
+    using second_type = T2;
     T1 first;
     T2 second;
 };
@@ -70,9 +70,9 @@ public:
 
 > **Note:** When you write a template, you can either use `typename` or `class` inside the parameters — they mean the same thing.
 
-For a variable of type `pair< int, char >` called `p`, `p.first` will be an `int` and `p.second` will be a `char`.
+> **Note:** Before C++11, you had to write `typedef T1 first_type` (C-style) instead of `using first_type = T1`.  The newer version (`using`) makes it a lot more clear that you're creating an alias for `T1` called `first_type`.
 
-In C++11, you can use `using first_type = T1;` instead of [`typedef`](https://cppreference.com/w/cpp/language/typedef) — this is now the preferred method so we'll use it from now on.  Either way, it means `pair< int, char >::second_type` is the same as `char`, a feature that is critical for advanced template programming.
+For a variable of type `pair< int, char >` called `p`, `p.first` will be an `int` and `p.second` will be a `char`.
 
 Template parameters can also have defaults; for example, if you wanted `pair` to default to two `void*` for some reason, you can write:
 
@@ -244,14 +244,11 @@ This may seem like a fairly useless feature, but can be quite powerful when comb
 
 #### Template Aliases
 
-More complex templates can be aliased to hide arguments not needed for common usage.  For example, `std::string` in the C++ standard library is actually an alias for `std::basic_string< char >`.  This is accomplished with a simple `typedef` or `using`, the latter being preferred in C++11 and higher:
+More complex templates can be aliased to hide arguments not needed for common usage.  For example, `std::string` in the C++ standard library is actually an alias for `std::basic_string< char >`.  This is accomplished with a simple alias:
 
 ```cpp
 namespace std
 {
-    // Pre-C++11:
-    typedef basic_string< char > string;
-    // C++11 and up:
     using string = basic_string< char >;
 }
 ```
