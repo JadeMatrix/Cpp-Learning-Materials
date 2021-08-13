@@ -264,7 +264,33 @@ That way when you write `dictionary< int >`, it's actually an alias for `std::ma
 
 ## Where Templates can Exist
 
-Now that you know how to write basic templates, there's one critical thing to remember: templates by themselves don't get compiled with the rest of your code.  Whenever you specialize a template with parameters, it becomes a real class, function, or whatever that can be compiled.  However, the template itself only exists in the C++ source file you wrote it in and other files that include that one.  This means that in general (with certain caveats that will be covered later), both template declarations and definitions have to remain entirely in header files.
+Now that you know how to write basic templates, there's one critical thing to remember: templates by themselves don't get compiled with the rest of your code.  Templates aren't types or functions — they're *templates for* types or functions. 
+
+Adding in the parameters to a template is called **specializing** it.  Whenever you specialize a template with parameters, it becomes a real class, function, or whatever that can be compiled.  For example, there is no type called `std::map`; it's only when you specialize it (like `std::map< std::string, int >`) that an actual type is created.
+
+The compiler does this by taking your template and basically copy-pasting the parameters into the definition:
+
+```cpp
+template< typename T > struct named
+{
+    std::string name;
+    T value;
+};
+
+named< int > my_special_value{ "special value", 1234 };
+// The compiler creates a type called `named< int >` here,
+// where the body looks like this:
+//   {
+//       std::string name;
+//       int value;
+//   };
+```
+
+In order to do this, the compiler needs to know what the definition looks like.  The definition for a template called `named` taking a single type argument must be visible at the point you write `named< int >`.  Generally, this means `named` either needs to be defined in the file you use it, or defined in a header you've `#include`d there.
+
+This means that most of the templates that you write will be entirely in header files — no `.cpp` files involved.  There are some advanced techniques that are exceptions, but those will be covered later.
+
+> ***Note:*** Generally you want to keep your header files as "clean" as possible (no unnecessary `#include`s or definitions) to increase encapsulation (= code quality) and keep compile times down.  If you have a utility template function that's used for a single purpose in a single `.cpp` file, for example, there's no need to put it in the header.  Just throw it in an [anonymous namespace](https://en.cppreference.com/w/cpp/language/namespace#Unnamed_namespaces) in the `.cpp` file to communicate that it's just an implementation detail.
 
 
 ## Basic Techniques
