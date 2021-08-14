@@ -267,7 +267,7 @@ That way when you write `dictionary< int >`, it's actually an alias for `std::ma
 
 Now that you know how to write basic templates, there's one critical thing to remember: templates by themselves don't get compiled with the rest of your code.  Templates aren't types or functions — they're *templates for* types or functions. 
 
-Adding in the parameters to a template is called **specializing** it.  Whenever you specialize a template with parameters, it becomes a real class, function, or whatever that can be compiled.  For example, there is no type called `std::map`; it's only when you specialize it (like `std::map< std::string, int >`) that an actual type is created.
+Adding in the parameters to a template is called **instantiating** it.  Whenever you instantiate a template with parameters, it becomes a real class, function, or whatever that can be compiled.  For example, there is no type called `std::map`; it's only when you instantiate it (like `std::map< std::string, int >`) that an actual type is created.
 
 The compiler does this by taking your template and basically copy-pasting the parameters into the definition:
 
